@@ -1,0 +1,194 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Enthusiast Website - Optimal Weight Calculator</title>
+    <meta name="description" content="A site for cat lovers that can help calculate their cat's optimal weight, offering tips, articles, and a vibrant community.">
+    <meta name="keywords" content="cats, animals, personal blog, cat health, optimal cat weight, cat care, pet lovers, feline wellness">
+    <meta name="author" content="Cat Enthusiast Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.catenthusiast.com/">
+    <meta property="og:title" content="Cat Enthusiast Website - Optimal Weight Calculator">
+    <meta property="og:description" content="A site for cat lovers that can help calculate their cat's optimal weight, offering tips, articles, and a vibrant community.">
+    <meta property="og:image" content="https://www.catenthusiast.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.catenthusiast.com/">
+    <meta property="twitter:title" content="Cat Enthusiast Website - Optimal Weight Calculator">
+    <meta property="twitter:description" content="A site for cat lovers that can help calculate their cat's optimal weight, offering tips, articles, and a vibrant community.">
+    <meta property="twitter:image" content="https://www.catenthusiast.com/images/twitter-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Google Fonts: Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/images/cat-logo.svg" alt="Cat Enthusiast Logo" class="logo">
+                <span class="site-name">Cat Enthusiast</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active"><i class="fas fa-home nav-icon"></i> Dashboard</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-calculator nav-icon"></i> Weight Calculator</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-heartbeat nav-icon"></i> Health Tips</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-paw nav-icon"></i> Cat Breeds</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-users nav-icon"></i> Community Forum</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-info-circle nav-icon"></i> About Us</a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-cog nav-icon"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-link"><i class="fas fa-sign-out-alt nav-icon"></i> Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1 class="page-title">Welcome, Cat Lover!</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="search" placeholder="Search for articles, breeds...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <button class="icon-button"><i class="fas fa-bell"></i></button>
+                    <div class="user-profile">
+                        <img src="/images/user-avatar.jpg" alt="User Avatar" class="avatar">
+                        <span>Whiskers' Human</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card card-calculator">
+                    <h2><i class="fas fa-calculator card-icon"></i> Optimal Weight Calculator</h2>
+                    <p>Enter your cat's details to find their ideal weight range and ensure a healthy life.</p>
+                    <form class="weight-form">
+                        <div class="form-group">
+                            <label for="cat-name">Cat's Name</label>
+                            <input type="text" id="cat-name" placeholder="e.g., Luna">
+                        </div>
+                        <div class="form-group">
+                            <label for="cat-age">Age (Years)</label>
+                            <input type="number" id="cat-age" min="0" max="25" value="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="cat-breed">Breed</label>
+                            <select id="cat-breed">
+                                <option value="domestic-shorthair">Domestic Shorthair</option>
+                                <option value="maine-coon">Maine Coon</option>
+                                <option value="siamese">Siamese</option>
+                                <option value="persian">Persian</option>
+                                <option value="bengal">Bengal</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="current-weight">Current Weight (kg)</label>
+                            <input type="number" id="current-weight" step="0.1" min="0.5" max="20" value="4.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="activity-level">Activity Level</label>
+                            <select id="activity-level">
+                                <option value="low">Low (mostly sleeps)</option>
+                                <option value="moderate">Moderate (plays daily)</option>
+                                <option value="high">High (very active, outdoor)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Calculate Optimal Weight</button>
+                    </form>
+                    <div class="calculation-result">
+                        <h3>Result:</h3>
+                        <p>Based on Luna's details, her ideal weight range is typically <strong>4.0 - 5.0 kg</strong>. Keep up the good work!</p>
+                    </div>
+                </div>
+
+                <div class="card card-articles">
+                    <h2><i class="fas fa-newspaper card-icon"></i> Latest Articles</h2>
+                    <ul class="article-list">
+                        <li>
+                            <a href="#">
+                                <h3>Understanding Your Cat's Body Language</h3>
+                                <p>Learn to interpret purrs, tail wags, and ear positions to better communicate with your feline friend.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>Top 5 Nutrients for a Healthy Feline Diet</h3>
+                                <p>Discover the essential vitamins and minerals your cat needs for optimal health and longevity.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>The Benefits of Regular Playtime for Indoor Cats</h3>
+                                <p>How daily play sessions can prevent boredom, reduce stress, and maintain a healthy weight.</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-secondary">View All Articles</a>
+                </div>
+
+                <div class="card card-community">
+                    <h2><i class="fas fa-users card-icon"></i> Community Spotlight</h2>
+                    <div class="spotlight-item">
+                        <img src="/images/community-cat.jpg" alt="Community Cat" class="spotlight-image">
+                        <h3>Meet Mittens, our Cat of the Month!</h3>
+                        <p>Mittens loves chasing laser pointers and cuddling with her human. Share your cat's story in our forum!</p>
+                        <a href="#" class="btn-secondary">Join the Discussion</a>
+                    </div>
+                </div>
+
+                <div class="card card-tips">
+                    <h2><i class="fas fa-lightbulb card-icon"></i> Quick Tips</h2>
+                    <ul class="tip-list">
+                        <li>Ensure fresh water is always available.</li>
+                        <li>Schedule annual vet check-ups.</li>
+                        <li>Provide scratching posts to protect furniture.</li>
+                        <li>Consider microchipping for safety.</li>
+                        <li>Introduce new foods gradually.</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">More Tips & Tricks</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Cat Enthusiast Website. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+```
